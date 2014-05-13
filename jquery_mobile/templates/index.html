@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/libs/jquery_mobile/jquery.mobile-1.4.2.min.css" />
+    <script src="/static/libs/jquery_mobile/jquery-1.11.0.min.js"></script>
+    <script src="/static/libs/jquery_mobile/jquery.mobile-1.4.2.min.js"></script>
+</head>
+
+<body>
+    
+    <div data-role="page" id="page1" data-title="这是标题1">
+        <div data-role="header"  class="ui-nodisc-icon ui-alt-icon">
+            <h1 data-inline='true'>什么值得买</h1>
+            <a href="#" class="ui-btn ui-btn-right ui-shadow ui-corner-all ui-icon-bullets ui-btn-icon-notext ui-btn-inline">More</a> 
+        </div>  
+         
+        <div data-role="content">
+            <a href="#page2" data-transition="slide">HEllo</a>
+            <a href="#page2" >HEllo</a>
+            <ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+                <li><a href="#">Acura</a></li>
+                <li><a href="#">Audi</a></li>
+                <li><a href="#">BMW</a></li>
+                <li><a href="#">Cadillac</a></li>
+                <li><a href="#">Ferrari</a></li>
+            </ul>
+            
+            <div class="ui-nodisc-icon ui-alt-icon" style="text-align:center; height:50px;"  data-role="controlgroup" data-type="horizontal"><!-- Classes added to the wrapper -->
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-inline">Home</a>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext ui-btn-inline ui-btn-active">Like</a>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-inline">Delete</a>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Plus</a>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-minus ui-btn-icon-notext ui-btn-inline">Minus</a>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-notext ui-btn-inline">Check</a>
+            </div>
+            
+        </div>
+        
+        <div data-role="footer" data-position="fixed" style="text-align:center;">
+            
+
+            
+
+            <table style="width:100%; border:0px;" class="ui-nodisc-icon ui-alt-icon" >
+                <tr >
+                    <td><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-inline">Home</a></td>
+                    <td><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext ui-btn-inline">Home</a></td>
+                    <td><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-shop ui-btn-icon-notext ui-btn-inline">Home</a></td>
+                    <td><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-inline">Home</a></td>
+                    <td><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-inline">Home</a></td>
+                </tr>
+            </table>
+            
+        </div>
+    
+    </div>
+    
+    <div data-role="page" id="page2" data-title="这是标题2">
+        <div data-role="header" class="ui-nodisc-icon ui-alt-icon" >
+            <a href="#" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext ui-btn-a ui-btn-inline">Back</a>  
+            <h1 data-inline='true'>什么值得买</h1>
+            <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets ui-btn-icon-notext ui-btn-a ui-btn-inline">More</a> 
+        </div>
+         
+        <div role="main" class="ui-content">
+            <p>I'm first in the source order so I'm shown as the page.</p>
+            <p>View internal page called <a href="#bar">bar</a></p>
+            
+            <ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+                <li data-role="list-divider">自动档</li>
+                <li><a href="#">Acura <span class="ui-li-count">2</span></a> <a href="#" class="ui-btn ui-shadow ui-icon-shop ui-btn-icon-notext ui-btn-a ui-btn-inline">Buy</a></li>
+                <li><a href="#">Audi <span class="ui-li-count">3</span></a> <a href="#" class="ui-btn ui-shadow ui-icon-shop ui-btn-icon-notext ui-btn-a ui-btn-inline">Buy</a></li>
+                <li data-role="list-divider">手动档</li>
+                <li><a href="#">BMW</a> <a href="#" class="ui-btn ui-shadow ui-icon-shop ui-btn-icon-notext ui-btn-a ui-btn-inline">Buy</a></li>
+                <li><a href="#">Cadillac</a> <a href="#" class="ui-btn ui-shadow ui-icon-shop ui-btn-icon-notext ui-btn-a ui-btn-inline">Buy</a> </li>
+                <li><a href="#">Ferrari</a></li>
+            </ul>
+            
+            
+            <ul data-role="listview" data-inset="false" class="ui-nodisc-icon ui-alt-icon">
+                <li>
+                    <a href="#">
+                        <img src="http://hhhhold.com/160/d/jpg?1" >
+                        <h1>Apple</h1>
+                        <p>iPhone6 release Today</p>
+                    </a> 
+               </li>
+                <li>
+                        <img src="http://hhhhold.com/160/d/jpg?3" >
+                        <h2>Apple</h2>
+                        <p>iPhone6 release Today</p>
+                    </a> 
+               </li>            </ul>
+            
+        </div><!-- /content -->
+        
+        <div data-role="footer">
+            <div class="ui-nodisc-icon" style="text-align:center;"><!-- Class added to the wrapper -->
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-b ui-btn-inline">Home</a>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext ui-btn-b ui-btn-inline">Like</a>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-b ui-btn-inline">Delete</a>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-b ui-btn-inline">Plus</a>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-minus ui-btn-icon-notext ui-btn-b ui-btn-inline">Minus</a>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-notext ui-btn-b ui-btn-inline">Check</a>
+            </div>
+        </div>
+    
+    </div>
+    
+    
+</body>
+</html>

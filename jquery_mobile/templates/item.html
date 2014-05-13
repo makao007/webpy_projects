@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>发现值得买</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/libs/jquery_mobile/jquery.mobile-1.4.2.min.css" />
+    <script src="/static/libs/jquery_mobile/jquery-1.11.0.min.js"></script>
+    <script src="/static/libs/jquery_mobile/jquery.mobile-1.4.2.min.js"></script>
+</head>
+
+<body>
+    
+    <div data-role="page" id="page1" data-title="发现值得买">
+        <div data-role="header"  class="ui-nodisc-icon ui-alt-icon">
+             <a href="#" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext ui-btn-a ui-btn-inline">Back</a>  
+            <h1 data-inline='true'><a href="/" style="text-decoration: none;">发现值得买</a></h1>
+        </div>  
+         
+        <div data-role="content">
+            {% if item %}
+                <h3>{{item.title}}</h3>
+                <p>{{item.summary}}</p>
+            {% else %}
+                文章不存在
+            {% endif %}
+        </div>
+        
+
+    
+    </div>
+    
+
+    
+</body>
+</html>

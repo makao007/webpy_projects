@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>发现值得买</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/libs/jquery_mobile/jquery.mobile-1.4.2.min.css" />
+    <script src="/static/libs/jquery_mobile/jquery-1.11.0.min.js"></script>
+    <script src="/static/libs/jquery_mobile/jquery.mobile-1.4.2.min.js"></script>
+</head>
+
+<body>
+    
+    <div data-role="page" id="page1" data-title="发现值得买">
+         
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+                {% for item in items %}
+                    <li><a href="/a/{{item.id}}"><img src="{{item.image}}">{{item.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+    
+</body>
+</html>
