@@ -1,0 +1,4 @@
+this is note for MySQL
+
+为数据表添加唯一约束
+alter table people add unique (eye_color)

@@ -1,0 +1,8 @@
+webpy
+Jinja2
+xlrt
+xlwt
+SQLAlchemy
+pyquery
+scrapy
+pymysql

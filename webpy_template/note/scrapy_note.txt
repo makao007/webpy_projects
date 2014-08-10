@@ -1,0 +1,7 @@
+scrapy note
+
+0. pip install scrapy  (on windows, need to install pywin32 first)
+1. scrapy startproject myproject
+2. cd myproject
+3. scrapy genspider mydomain mydomain.com           #without http://www.
+4. scrapy crawl mydomain -o result.json

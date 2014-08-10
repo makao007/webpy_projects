@@ -1,0 +1,75 @@
+scrapy - note
+
+#items.py
+class DmozItem(scrapy.Item):
+    title = scrapy.Field()
+    link = scrapy.Field()
+    desc = scrapy.Field()
+    
+#spiders/my_spider.py
+import scrapy
+
+class DmozSpider(scrapy.Spider):
+    name = "dmoz"
+    allowed_domains = ["dmoz.org"]
+    start_urls = [
+        "http://www.dmoz.org/Computers/Programming/Languages/Python/Books/",
+        "http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/"
+    ]
+
+    def parse(self, response):
+        filename = response.url.split("/")[-2]
+        with open(filename, 'wb') as f:
+            f.write(response.body)    
+            
+CMD:
+scrapy crawl dmoz
+-----------------------
+to test the syntax of the xpath
+scrapy shell "http://www.dmoz.org/Computers/Programming/Languages/Python/Books/"
+response.xpath('//title')
+response.xpath('//title').extract()
+response.xpath('//title/text()')
+response.xpath('//title/text()').extract()
+response.xpath('//title/text()').re('(\w+):')
+
+def parse(self, response):
+        for sel in response.xpath('//ul/li'):
+            title = sel.xpath('a/text()').extract()
+            link = sel.xpath('a/@href').extract()
+            desc = sel.xpath('text()').extract()
+            print title, link, desc
+            
+-------------------------
+def parse(self, response):
+        for sel in response.xpath('//ul/li'):
+            item = DmozItem()
+            item['title'] = sel.xpath('a/text()').extract()
+            item['link'] = sel.xpath('a/@href').extract()
+            item['desc'] = sel.xpath('text()').extract()
+            yield item
+-------------------------
+scrapy crawl dmoz -o items.json
+-------------------------
+pinelines.py
+    def process_item(self, item, spider):
+        if item['price']:
+            if item['price_excludes_vat']:
+                item['price'] = item['price'] * 0.5
+            return item
+        else:
+            raise DropItem("Missing price in %s" % item)
+            
+
+
+－－－－－－－－－－－－－－－－
+图片下载  (在items.py中设置两个字段，在settings.py里面设置下载的图片的存放路径)
+1. items.py
+    image_urls = scrapy.Field()
+    images     = scrapy.Field()
+2. settings.py
+    ITEM_PIPELINES = {'scrapy.contrib.pipeline.images.ImagesPipeline': 1}
+    IMAGES_STORE = './images/'
+    IMAGES_EXPIRES = 90
+－－－－－－－－－－－－－－－－
+

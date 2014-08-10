@@ -1,0 +1,5 @@
+2014 07 02
+
+1. new , an hello world page
+2. add logger
+3. config folder

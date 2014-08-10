@@ -1,0 +1,7 @@
+
+
+0. 安装依赖库  pip install -r requirements.txt
+1. 编辑配置文件 （数据库信息，上传文件的路径等）
+2. 创建 数据库表
+3. 开通防火墙 (iptables)
+

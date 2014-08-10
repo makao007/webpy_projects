@@ -1,0 +1,88 @@
+<style>
+    html, body { position: relative; height: 100%; width: 100%; overflow-x: hidden; margin:0px; padding:0px;}
+    body {font-family: Helvetica Neue,Helvetica,Arial,sans-serif; margin:0px 3px;}
+
+    #mobile {position:relative; width:100%; height:100%; background:#f2f2f2; margin:0 auto; }
+
+    .left  {float:left; margin-left:7px;}
+    .center{text-align:center; }
+    .right {float:right; margin-right:7px;}
+     
+    .header  { position:absolute; left: 0; top: 0; background: #f7f7f8; border-bottom: 1px solid #c4c4c4; height:43px; line-height:43px; width: 100%; overflow:hidden; z-index:10; outline:0px;}
+    .footer  { position:absolute; left: 0; bottom: 0; background: #f7f7f8; border-top: 1px solid #c4c4c4; height:43px; line-height:43px; width: 100%; overflow:hidden; z-index:10;}
+    .content { height: 100%; overflow-y:scroll;  word-wrap: break-word; padding-top:44px; padding-bottom:44px; }
+    
+    .header a {text-decoration:none; color:#007AFF; }
+    .footer a {text-decoration:none; color:#007aff; }
+    .header a.title {font-weight:bold; color:#000; text-align:center;  }
+</style>
+
+
+<body>
+    
+    <div id="mobile">
+        <div class="header">
+            <div>
+                <a href="#" class="left"> &lt; Back </a>
+                <a href="#" class="title"> 什么值得买 </a>
+                <a href="#" class="right"> More </a>
+            </div>
+        </div>
+        <div class="content">
+            <h3>WEBAPP介绍及其iOS Web开发技巧总结</h3>
+            <p>
+                结合网上相关资料，以及自己项目中的经验，收集汇总了iOS Webapp相关的开发知识，如下。
+
+WebApp是一种新出现的基于WEB形式的类应用程序，运行在高端的移动终端设备上，其应用范围会越来越广。
+
+开发者们都知道在高端智能手机系统中有两种应用程序：一种是基于本地（操作系统）运行的APP；一种是基于高端机的浏览器运行的WebApp，本文将主要讲解后者。
+
+WebApp与Native App有何区别呢？
+            </p>
+            <p>
+Native App：
+
+1、开发成本非常大。
+一般使用的开发语言为JAVA、C++、Objective-C。
+
+2、更新体验较差、同时也比较麻烦
+每一次发布新的版本，都需要做版本打包，且需要用户手动更新（有些应用程序即使不需要用户手动更新，但是也需要有一个恶心的提示）。
+
+3、非常酷
+因为native app可以调用IOS中的UI控件以UI方法，它可以实现WebApp无法实现的一些非常酷的交互效果
+
+4、Native app是被Apple认可的
+Native app可以被Apple认可为一款可信任的独立软件，可以放在Apple Stroe出售，但是Web app却不行。
+
+Web App：
+1、开发成本较低
+使用html5 + CSS3 + js 等web开发技术就可以轻松的完成web app的开发。效果上面能够完全模拟传统应用程序效果。
+
+2、升级较简单
+由于不需要通过苹果商店发布，所以升级不需要通知用户，在服务端更新文件即可，用户完全没有感觉
+
+3、维护比较轻松
+和一般的web一样，维护比较简单，它其实就是一个站点
+
+Webapp说白了就是一个针对Iphone、Android优化后的web站点，它使用的技术无非就是HTML或HTML5、CSS3、JavaScript，服务端技术JAVA、PHP、ASP。
+
+当然，因为这些高端智能手机（Iphone、Android）的内置浏览器都是基于webkit内核的，所以在开发WEBAPP时，多数都是使用 HTML5和CSS3技术做UI布局。当使用HTML5和CSS3l做UI时，若还是遵循着一般web开发中使用HTML4和CSS2那样的开发方式的 话，这也就失去了WEBAPP的本质意义了，且有些效果也无法实现的，所以在此又回到了我们的主题–webapp的布局方式和技术。
+
+在此所说的移动平台前端开发是指针对高端智能手机（如Iphone、Android）做站点适配也就是WebApp，并非是针对普通手机开发 Wap 2.0，所以在阅读本篇文章以前，你需要对webkit内核的浏览器有一定的了解，你需要对HTML5和CSS3有一定的了解。如果你已经对此有 所了解，那现在就开始往下阅读吧……
+
+1、首先我们来看看webkit内核中的一些私有的meta标签，这些meta标签在开发webapp时起到非常重要的作用
+
+第一个meta标签表示：强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览；
+user-scalable定义是否可缩放（0为不缩放），使页面固定设备上面的大小。
+（注意：据说HTC G7自身系统浏览器不支持这一条规则，能对页面进行放大，一旦放大导致页面布局错乱，
+        </p>
+            
+        </div>
+        <div class="footer">
+            <div>
+                <a href="#" class="left">Dummy Link</a>
+                <a href="#" class="right">Menu</a>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,5 @@
+2014-07-02 18:01:19,046 -root -INFO log.py[line:40] __ this is a test for writing info log
+2014-07-02 18:01:19,046 -root -DEBUG log.py[line:41] __ this is a test for writing debug log
+2014-07-02 18:01:19,046 -root -WARNING log.py[line:42] __ this is a test for writing warning log
+2014-07-02 18:01:19,046 -root -ERROR log.py[line:43] __ this is a test for writing error log
+2014-07-02 18:01:19,046 -root -CRITICAL log.py[line:44] __ this is a test for writing critical log

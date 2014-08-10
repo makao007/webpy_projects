@@ -1,0 +1,58 @@
+<style>
+    html, body { position: relative; height: 100%; width: 100%; overflow-x: hidden; margin:0px; padding:0px;}
+    body {font-family: Helvetica Neue,Helvetica,Arial,sans-serif;}
+
+    #mobile {position:relative; width:100%; height:100%; background:#f2f2f2; margin:0 auto; }
+   .content { height: 100%; overflow-y:scroll;  word-wrap: break-word; }
+   .content a {text-decoration:none; color:#333;}
+    
+   .buy {
+        border-radius: 5px;
+        background-color: #F0B0B5;
+        color: #333;
+        padding: 3px 10px;
+        font-size: 12px;
+   }
+</style>
+
+
+<body>
+    <div id="mobile">
+        <div class="content">
+            <div style="width:100%; height:30px; padding-top:10px; background-color:#E2D8D8; text-align: center; border-bottom: 1px solid #2BA9B4; margin-bottom:3px;"><a href="/">发现值得买</a></div>
+            <table>
+            {% for item in data.records %}
+                <tr style="vertical-align: top;">
+                    <td>
+                        <a href="{{item.link}}" target="_blank">
+                            <img src="{{item.image}}" style="width:60px; height:60px;">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{item.link}}" target="_blank">{{item.title}}</a> <br/>
+                        <div style="height:5px;" >&nbsp;</div>
+                        <a href="{{item.buy}}"  target="_blank" class="buy">直接购买</a>
+                    </td>
+                </tr>
+            {% else %}
+                <p>没有数据</p>
+            {% endfor %}
+            </table>
+            
+            <div style="height:40px; text-align:center;">
+            {% if data.records %}
+                {% if data.index <= 0 %}
+                    <a href="#">上一页</a>
+                {% else %}
+                    <a href="/p/{{data.index-1}}" class="buy">上一页</a>
+                {% endif %}
+                
+                <span>第{{data.index+1}}页</span>
+                
+                <a href="/p/{{data.index+1}}" class="buy">下一页</a>
+            {% endif %}
+            </div>
+            
+        </div>
+    </div>
+</body>
