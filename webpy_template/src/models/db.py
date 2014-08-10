@@ -6,18 +6,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-
-db = {
-    'engine': 'mysql',
-    'name'  : 'smzdm',
-    'user'  : 'root',
-    'pawd'  : '1234',
-    'port'  : 3306,
-    'host'  : '127.0.0.1',   #localhost not work
-    'char'  : 'utf8',
-    'log'   : True,  #show log 
-    'adapt' : "+pymysql"
-}
+import config
+db = config.site.db
 
 db_str = "%s%s://%s:%s@%s:%s/%s?charset=%s" % (db['engine'], db['adapt'], db['user'], db['pawd'], db['host'], db['port'], db['name'], db['char'])
 engine = create_engine(db_str, echo=db['log'])
@@ -26,8 +16,8 @@ Base = declarative_base()
 
 class User(Base):
     __tablename__ = 'users'
-    id = Column(Integer, Sequence('user_id_seq'), primary_key=True)
-    name = Column(String(100))
+    id       = Column(Integer, Sequence('user_id_seq'), primary_key=True)
+    name     = Column(String(100))
     weight   = Column(Numeric(3.2))
     address  = Column(String(100))
     fullname = Column(String(100))

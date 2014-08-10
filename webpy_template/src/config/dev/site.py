@@ -39,3 +39,15 @@ cookie = {
 character = {
     'content_type': "text/html; charset=utf-8",
 }
+
+db = {
+    'engine': 'mysql',
+    'name'  : 'smzdm',
+    'user'  : 'root',
+    'pawd'  : '1234',
+    'port'  : 3306,
+    'host'  : '127.0.0.1',   #localhost not work
+    'char'  : 'utf8',
+    'log'   : True,  #show log 
+    'adapt' : "+pymysql"
+}
