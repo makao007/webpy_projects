@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{keyword}} - Google 搜索</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        <style>
+            html, body {margin:0px; padding:0px;}
+        
+            div#search_box {
+                background-color: #f1f1f1;
+                background-image: -webkit-gradient(radial,100 36,0,100 -40,120,from(#fafafa),to(#f1f1f1));
+                border-bottom: 1px solid #666;
+                border-color: #e5e5e5;
+                height: 65px;
+            }
+
+            div#search_box>div {padding-top:13px; margin-left:20px;}
+            div#search_box>div label {font-size: 28px; color: #695B1F; font-family: -webkit-pictograph; }
+            div#search_box>div input.next_input {width:500px; height:18px; margin-left:10px;}
+            
+            
+            form {text-align:left;}
+            .shade {
+                border:1px solid #ccc; padding:6px 12px; border-radius: 4px; color:#555;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            }
+            
+            .shade:focus {
+                border-color: #66afe9;
+                outline: 0;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+            }
+            
+            .next_input {margin-top:0px;}
+            
+            input.title  {width:100%; height:  40px; font-size: 14px; }
+            input.button {width: 74px;height:  32px; font-size: 12px; border-radius: 4px; line-height:27px; background-color:white; vertical-align: middle; border:1px solid #ccc; cursor:pointer; outline:0;}
+            input.button:hover {
+                border-color: #66afe9;
+                outline: 0;
+                background-color: #ccc;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+            }
+            input.button:focus {
+                background-color:#4d90fe;
+                color:white;
+            }
+           
+            
+            div#result {width:550px; margin-left:120px;}
+            div#result>div {margin-top:25px;}
+            
+            div#result div.title {
+                color: #1A0DAB;
+                display: block;
+                font-family: arial, sans-serif;
+                font-size: 18px;
+                font-weight: normal;
+                height: 18px;
+                line-height: 18px;
+                list-style-image: none;
+                list-style-position: outside;
+                list-style-type: none;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 0px;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                padding-bottom: 0px;
+                padding-left: 0px;
+                padding-right: 0px;
+                padding-top: 0px;
+                text-align: left;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 512px;
+                zoom: 1;
+            }
+            div#result div.desc {
+                color: #545454;
+                display: inline;
+                font-family: arial, sans-serif;
+                font-size: 13px;
+                font-weight: normal;
+                height: auto;
+                line-height: 18.2000007629395px;
+                list-style-image: none;
+                list-style-position: outside;
+                list-style-type: none;
+                text-align: left;
+                width: auto;
+                word-wrap: break-word;
+                zoom: 1;
+            } 
+            div#result div.link {
+                color: #006621;
+                display: inline;
+                font-family: arial, sans-serif;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: normal;
+                height: auto;
+                line-height: 16px;
+                list-style-image: none;
+                list-style-position: outside;
+                list-style-type: none;
+                text-align: left;
+                white-space: nowrap;
+                width: auto;
+                zoom: 1;
+                display:block;
+            }
+            
+            div#next_pages {}
+            div#next_pages>div {text-align:center;}
+            div#next_pages a {text-decoration: none; font-size:18px; color: #1A0DAB; margin-right:5px; }
+        </style>
+        
+    </head>
+    
+    <body>
+        <div id="search_box">
+            <div>
+            <form >
+                <label>Google</label>
+                <input maxlength="2048" name="q" autocomplete="off" title="Google 搜索" type="text" value="{{keyword}}" class="shade next_input">
+                <input type="submit" value="搜索" class="button">
+            </form>
+            </div>
+        </div>
+        
+        <div id="result">
+            <div>
+                <div class="title">平板电脑 - 数码之家 - IT之家</div>
+                <div class="link" >digi.ithome.com/pingban</div>
+                <div class="desc" >平板电脑之家，提供最新最快最全的平板电脑报价和资讯，最酷最热的平板电脑评测，把握平板电脑的一切。</div>
+            </div>
+            <div>
+                <div class="title">平板电脑 - 数码之家 - IT之家</div>
+                <div class="link" >digi.ithome.com/pingban</div>
+                <div class="desc" >平板电脑之家，提供最新最快最全的平板电脑报价和资讯，最酷最热的平板电脑评测，把握平板电脑的一切。</div>
+            </div>
+            <div>
+                <div class="title">平板电脑 - 数码之家 - IT之家</div>
+                <div class="link" >digi.ithome.com/pingban</div>
+                <div class="desc" >平板电脑之家，提供最新最快最全的平板电脑报价和资讯，最酷最热的平板电脑评测，把握平板电脑的一切。</div>
+            </div>
+            <div>
+                <div class="title">平板电脑 - 数码之家 - IT之家</div>
+                <div class="link" >digi.ithome.com/pingban</div>
+                <div class="desc" >平板电脑之家，提供最新最快最全的平板电脑报价和资讯，最酷最热的平板电脑评测，把握平板电脑的一切。</div>
+            </div>
+            <div>
+                <div class="title">平板电脑 - 数码之家 - IT之家</div>
+                <div class="link" >digi.ithome.com/pingban</div>
+                <div class="desc" >平板电脑之家，提供最新最快最全的平板电脑报价和资讯，最酷最热的平板电脑评测，把握平板电脑的一切。</div>
+            </div>
+            <div>
+                <div class="title">平板电脑 - 数码之家 - IT之家</div>
+                <div class="link" >digi.ithome.com/pingban</div>
+                <div class="desc" >平板电脑之家，提供最新最快最全的平板电脑报价和资讯，最酷最热的平板电脑评测，把握平板电脑的一切。</div>
+            </div>
+            <div>
+                <div class="title">平板电脑 - 数码之家 - IT之家</div>
+                <div class="link" >digi.ithome.com/pingban</div>
+                <div class="desc" >平板电脑之家，提供最新最快最全的平板电脑报价和资讯，最酷最热的平板电脑评测，把握平板电脑的一切。</div>
+            </div>
+            
+            <hr/>
+            <div id="next_pages">
+                <div>
+                    <a href="#">上一页</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">下一页</a>
+                </div>
+                <br/>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+<script>
+    function encry_keyword (word) {  
+        return encodeURIComponent (word).replace(/%/g, '^').split("").join('-');
+    }
+    
+</script>

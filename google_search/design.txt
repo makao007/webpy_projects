@@ -1,0 +1,10 @@
+
+背景：有时候google search连不上，无法进行搜索，本项目就是解决这个问题
+
+原理：将关键词转发给Google,取出结果，再显示给前端用
+
+加密：从前端到后端的关键词将会使用简单的算法
+
+https://www.google.com.hk/search?q=%E5%B9%B3%E6%9D%BF&newwindow=1&safe=strict&start=0&sa=N
+
+
